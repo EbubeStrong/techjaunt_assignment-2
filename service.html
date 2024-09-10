@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NavBar</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="headerSection large-screen">
+      <div>
+        <img src="./img/logo.jpg" alt="logo" />
+      </div>
+      <nav class="nav-links" role="navigation" aria-label="Main Navigation">
+        <ul role="menu">
+          <li role="none">
+            <a href="./index.html" role="menuitem" aria-label="Go to Home page">
+              <span aria-hidden="true">⬅</span> Home
+            </a>
+          </li>
+          <li role="none">
+            <a
+              href="#"
+              role="menuitem"
+              aria-label="View Our Services"
+              aria-controls="services-section"
+              aria-expanded="false"
+            >
+              Our Services
+            </a>
+          </li>
+          <li role="none">
+            <a
+              href="./contact.html"
+              role="menuitem"
+              aria-label="Go to Contact page"
+            >
+              Contact <span aria-hidden="true">➡</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <header class="headerSection-2 small-screen">
+      <div class="logo">
+        <img src="./img/logo.jpg" alt="logo" />
+      </div>
+      <input type="checkbox" id="menuToggle" class="hamburger-checkbox" />
+      <label for="menuToggle" class="hamburger">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          style="fill: rgba(0, 0, 0, 1)"
+        >
+          <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"></path>
+        </svg>
+      </label>
+
+      <div class="close">
+        <label for="menuToggle" class="close-icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            style="fill: rgb(243, 5, 5)"
+          >
+            <path
+              d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z"
+            ></path>
+          </svg>
+        </label>
+
+        <nav class="nav-links" role="navigation" aria-label="Main Navigation">
+        <ul role="menu">
+          <li role="none">
+            <a href="./index.html" role="menuitem" aria-label="Go to Home page">
+              Home  <span aria-hidden="true">➡</span>
+            </a>
+          </li>
+          <li role="none">
+            <a
+              href="#"
+              role="menuitem"
+              aria-label="View Our Services"
+              aria-controls="services-section"
+              aria-expanded="false"
+            >
+              Our Services
+            </a>
+          </li>
+          <li role="none">
+            <a
+              href="./contact.html"
+              role="menuitem"
+              aria-label="Go to Contact page"
+            >
+              Contact <span aria-hidden="true">➡</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      </div>
+    </header>
+  </body>
+</html>

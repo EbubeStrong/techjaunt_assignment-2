@@ -1,0 +1,229 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --headerSection: #fff;
+}
+
+.headerSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  padding: 20px;
+  background-color: var(--headerSection);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.small-screen {
+  display: none;
+}
+
+.large-screen .nav-links ul{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 50%;
+  gap: 40px;
+  width: 100%;
+  list-style-type: none;
+}
+
+.headerSection nav ul li a {
+  cursor: pointer;
+  position: relative;
+  transition: 0.3s linear, color 0.2s ease-in;
+  font-size: 25px;
+  color: blue;
+  text-decoration: none;
+}
+
+.headerSection nav ul li a:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0px;
+  background-color: black;
+  height: 3px;
+  transition: 0.3s linear;
+  transform: translateX(0);
+}
+
+.nav-links ul li a:hover {
+  color: black;
+}
+
+.headerSection nav ul li a:hover span {
+  display: inline-flex;
+}
+
+.headerSection nav ul li a:hover::before {
+  width: 100%;
+}
+
+.headerSection nav ul li a span {
+  display: none;
+  color: black;
+  transition: 0.3s ease-in-out, transform 0.6s ease-in;
+}
+
+@media (max-width: 750px) {
+  .headerSection-2 {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    padding: 20px;
+    background-color: var(--headerSection);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.9s ease-in;
+    position: relative;
+  }
+
+  .large-screen {
+    display: none;
+  }
+
+  .small-screen {
+    display: block;
+    position: sticky;
+    top: 0;
+    right: 0;
+    width: 100%;
+  }
+
+  .logo{
+    width: fit-content;
+  }
+
+  .hamburger-checkbox {
+    display: none;
+  }
+
+  .hamburger,
+  .close-icon {
+    cursor: pointer;
+  }
+
+  .hamburger{
+    display: flex;
+    align-items: end;
+    justify-content: flex-end;
+    width: fit-content;
+    position: absolute;
+    top: 0;
+    bottom: 30px;
+    right: 20px;
+  }
+
+  .close .nav-links {
+    opacity: 0;
+    transform: translateX(100%);
+    transition: transform 2s ease-in-out, opacity 0.7s ease-in-out;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 70%;
+    background-color: #fff;
+    padding: 130px 20px 20px;
+    text-align: center;
+    z-index: 1;
+  }
+
+  .close-icon {
+    display: none;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 999;
+  }
+
+  .hamburger-checkbox:checked ~ .hamburger {
+    display: none;
+  }
+
+  .hamburger-checkbox:checked ~ .close .close-icon {
+    display: block;
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    z-index: 999;
+  }
+
+  .hamburger-checkbox:checked ~ .close .nav-links {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    background-color: var(--headerSection);
+    padding: 130px 20px 20px;
+    text-align: center;
+    z-index: 1;
+    transform: translateX(0);
+    transition: transform 1s ease-in-out;
+    opacity: 1;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  }
+
+  .nav-links ul{
+    list-style: none;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 10px 0;
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    margin-top: 10px;
+    position: relative;
+    transition: 0.3s linear, color 0.2s ease-in;
+    width: 100%;
+    color: #00f;
+  }
+
+  .nav-links a span {
+    display: none;
+    color: black;
+    transition: 0.3s ease-in-out, transform 0.6s ease-in;
+  }
+
+  .nav-links a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    background-color: black;
+    height: 2px;
+    transition: 0.3s linear;
+    transform: translateX(2px);
+  }
+
+  .nav-links a:hover{
+     color: black;
+  }
+
+  .nav-links a:hover::before{
+  color: blue;
+  width: 50%;
+  transform: translate(50%, 50%);
+}
+
+  .nav-links a:hover span {
+  display: inline-flex;
+}
+}
